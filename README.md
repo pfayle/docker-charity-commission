@@ -13,7 +13,7 @@ docker run -d --name db \
   -e MYSQL_ROOT_HOST=% \
   -e MYSQL_ROOT_PASSWORD='' \
   --net=charity-net \
-  mysql/mysql-server
+  mysql/mysql-server:5.7
 
 docker run --rm --net=charity-net \
   -e datasource='http://apps.charitycommission.gov.uk/data/201804/extract1/RegPlusExtract_April_2018.zip' \
