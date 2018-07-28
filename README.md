@@ -1,4 +1,4 @@
-# docker-charity-commission
+  docker-charity-commission
 Docker container to load UK Charity Commission data into a MySQL database
 
 ## Example setup
@@ -9,6 +9,7 @@ docker build -t charity-commission-importer .
 docker network create charity-net
 
 docker run -d --name db \
+  -p 3306:3306 \
   -e MYSQL_ALLOW_EMPTY_PASSWORD=true \
   -e MYSQL_ROOT_HOST=% \
   -e MYSQL_ROOT_PASSWORD='' \
